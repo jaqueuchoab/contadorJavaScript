@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #a554c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+header {
+  width: 28vw;
+  height: 6.5rem;
+  background-color: #f4f4f4;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.185);
+}
+
+img {
+  width: 230px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div#circle {
+  height: 50vh;
+  width: 25vw;
+  background-color: #f4f4f488;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  color: #f4f4f4c9;
+  font-size: 140pt;
+  font-family: Ubuntu;
+  font-weight: 450;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.205);
+}
+
+div#buttons {
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  z-index: 3000;
+}
+
+[data-button] {
+  background: #f4f4f4d2;
+  padding: 0.5rem 3rem;
+  border-radius: 3rem;
+  font: bold 12pt monospace;
+  color: #000000c7;
+  text-transform: lowercase;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+[data-button='buttonResetar'] {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+@media (max-width: 700px) {
+  div#circle {
+    height: 50vh;
+    width: 60vw;
+    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  [data-button] {
+    padding: 0.5rem 2.6rem;
+    width: 10rem;
+    font: bold 12pt monospace;
+    margin-bottom: 6px;
+  }
+
+  div#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-between;
+    margin-top: 0;
+  }
+
+  header {
+    width: 60vw;
+    height: 5.5rem;
+  }
+
+  img {
+    width: 200px;
+  }
+}
+
+/*style das ondinhas*/
+.wavesBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wave-1 {
+  animation: moveWave1 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}
+
+.wave-2 {
+  animation: moveWave2 3s 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave2 {
+  from {
+    transform: translateY();
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
+
+.wave-3 {
+  animation: moveWave3 3s 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(80px);
+  }
+}
